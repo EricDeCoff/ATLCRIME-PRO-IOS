@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>ATLCRIME - JQM</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!--Font-Awesome -->
+    <link rel="stylesheet" href="./fa/css/font-awesome.css">    
+    
+    <!-- Custom Fonts -->
+
+    <!--
+    <link href="./css/jqm-icon-pack-fa.css" rel="stylesheet" >
+    -->
+    
+    <link rel="stylesheet" href="./css/style.min.css">
+</head> 
+<body>
+    <div data-role="page" class="jqm-home" id="page-options">
+        <div role="main" class="ui-content jqm-content" id="ac-options">
+       </div>
+    </div>
+
+    <div data-role="page" class="jqm-loading" id="page-loading" data-theme="b">
+        <div role="main" class="ui-content jqm-content" id="ac-loading">
+            <div id="bgImg"></div>
+        </div>
+    </div>
+    
+    <div data-role="page" class="jqm-no-signal" id="page-no-signal" data-theme="b">
+        <div data-role="header">
+            <div data-role="controlgroup" data-type="horizontal" style="text-align:center;padding-top: 10px;">
+                    <a class="ui-btn-left ui-btn ui-btn-icon-left ui-shadow ui-btn-up-a" 
+                       data-role="button"
+                       data-icon="arrow-l" data-theme="a" data-mini="true" 
+                       href="#page-options"><i class="fa fa-arrow-left"></i>
+                       &nbsp;Back</a>
+                    <strong><span class="no-signal-title">Bad data signal</span></strong>
+            </div>
+	    </div>
+        <div role="main" class="ui-content jqm-content">
+            <div id="ac-no-signal"></div>
+            <div class="no-signal-message" data-theme="e">Error Message Goes Here</div>
+        </div>
+    </div>  
+
+    <div data-role="page" class="jqm-results" id="page-results" data-theme="b">
+        <div role="content" class="ui-content jqm-results" id="ac-results"></div>
+    </div>
+
+    <div data-role="page" class="jqm-exit" id="page-exit" data-theme="b">
+        <div role="main" class="ui-content jqm-content" id="ac-exit"></div>
+    </div>
+
+    <div data-role="page" class="jqm-map" id="page-map" data-theme="a">
+        <div role="main" class="ui-content jqm-content" id="ac-map">
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <div data-role="page" class="jqm-about" id="page-about" data-theme="a">
+        <div data-role="header"  data-theme="b" data-add-back-btn="true">
+            <h1>Information</h1>
+	   </div>
+        <div role="main" class="ui-content jqm-content" id="ac-about"></div>
+    </div>
+</div>
+
+    <!-- scripts move to end to enhance page load time -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOuDYoR-xICFmfZXI1jW-wYznTmQxQ_e8&sensor=true"></script>
+
+    <script src='intelxdk.js'></script>
+    
+    <!-- phonegap script -->
+    <script src="phonegap.js"></script>
+
+    <script src="bundle.min.js"></script>
+    
+    <script type="text/javascript">
+        app.initialize();
+        
+    </script>        
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+    <form id="options" autocomplete="off">
+            <center>
+            <span class="metro outline red">ATL</span><span class="metro outline yellow">CRIME</span>
+            <br>
+            <span class="russo">Select Options</span>
+            <div class="ui-field-contain">
+               <select class="ui-crime-type" data-native-menu="false" id="ac-crime-type">
+                    <option value="Auto">Auto</option>
+                    <option value="Assault">Assault</option>
+                    <option value="Burglary">Burglary</option>
+                    <option value="Homicide">Homicide</option>
+                    <option value="Larceny">Larceny</option>
+                    <option value="Robbery">Robbery</option>
+                    <option value="Rape">Rape</option>
+                </select>
+               <select class="ui-days" data-native-menu="false" id="ac-days">
+                    <option value="7">Days (7)</option>
+                    <option value="14">2 Weeks</option>
+                    <option value="21">3 Weeks</option>
+                    <option value="28">4 Weeks</option>
+                    <option value="35">5 Weeks</option>
+                    <option value="42">6 Weeks</option>
+                    <option value="30">Days (30)</option>
+                    <option value="60">Days (60)</option>
+                    <option value="90">Days (90)</option>
+                    <option value="120">Days (120)</option>
+                    <option value="150">Days (150)</option>
+                    <option value="180">Days (180)</option>      
+                    <option value="365">Years (1)</option>                   
+                    <option value="730">Years (2)</option>                                       
+                    <option value="1095">Years (3)</option>                                       
+                    <option value="1460">Year (4)</option>     
+                    <option value="1825">Year (5)</option>                                                      
+                </select>
+                <select class="ui-pr" data-native-menu="false" id="ac-pr">
+                        <option value="100">Pins (100)</option>
+                        <option value="200">Pins (200)</option>
+                        <option value="300">Pins (300)</option>
+                        <option value="400">Pins (400)</option>
+                        <option value="500">Pins (500)</option>
+                        <option value="600">Pins (600)</option>
+                        <option value="700">Pins (700)</option>
+                        <option value="800">Pins (800)</option>
+                        <option value="900">Pins (900)</option>
+                        <option value="1000">Pins (1000)</option>
+                        <option value="2000">Pins (2000)</option>
+                        <option value="3000">Pins (3000)</option>
+                        <option value="4000">Pins (4000)</option>
+                        <option value="5000">Pins (5000)</option>
+                    
+                        <option value="1">Radius (1 Mile)</option>
+                        <option value="2">Radius (2 Mile)</option>                        
+                        <option value="3">Radius (3 Mile)</option>                        
+                        <option value="4">Radius (4 Mile)</option>                        
+                        <option value="5">Radius (5 Mile)</option>    
+
+                </select>
+                <select class="ui-tod" data-native-menu="false" id="ac-tod">
+                    <option value="ALL">ALL</option>
+                    <option value="DAY">DAY</option>
+                    <option value="NIGHT">NIGHT</option>
+                </select>
+            <style>
+                .bg-green{
+                    background-color: chartreuse ! important;
+                }
+            </style>
+            <!-- ui-disabled -->                
+            <a class="ui-btn ui-btn-corner-all bg-green ui-btn-get-data"
+               onclick="app.getResults()">
+                <i class="fa fa-cloud-download fa-3x"></i>&nbsp;&nbsp;               
+                <span class="russo red outline">Get</span>&nbsp;<span class="russo yellow outline">Data</span>
+            </a>
+                
+            </div>
+                
+
+            
+            <h4>
+                <label class="pull-left" style="padding-top: 6px">&copy;&nbsp;2013 &bull; ATLCRIME</label>
+                <a href="#page-about" onclick="app.setDeviceInfo()" class="pull-right"><i class="fa fa-info-circle fa-2x"></i></a>
+                
+            </h4>
+
+        </form>
+            
+    <script>
+        var _event = 'pagebeforehide';
+
+        $('select').on('change',function(e){
+            console.log('options-jqm.change');
+            dataStorage.onChange(e.currentTarget.id,$(this).val());
+        });
+        
+        $('.jqm-home').on(_event,function(event, ui){
+//            alert(_event);
+            var _selects = ['#ac-crime-type', '#ac-days', '#ac-pr', '#ac-tod' ];
+            jQuery.each(_selects, function(index,value){
+                $(value+'-dialog')
+                        .find('div.ui-dialog-contain')
+                        .find('div.ui-header')
+                        .find('div.ui-title')
+                        .html('<span class="metro metro-mini red outline">ATL</span><span class="metro metro-mini yellow outline">CRIME</span>');
+            });
+            var _ui = $('#ac-days-dialog')
+                        .find('div.ui-dialog-contain')
+                        .find('div.ui-header')
+                        .find('div.ui-title')
+                        .html('<span class="metro metro-mini red outline">ATL</span><span class="metro metro-mini yellow outline">CRIME</span>');
+//            alert(_ui);
+        });
+    </script>
+            
+ 

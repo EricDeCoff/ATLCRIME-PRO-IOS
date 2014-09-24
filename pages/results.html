@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<center>
+<span class="metro red outline">ATL</span>
+<span class="metro yellow outline">CRIME</span>
+<br>
+<span class="russo">(&nbsp;&nbsp;<span id="ac-results-crime-type">( test )</span>&nbsp;&nbsp;)</span>
+</center>
+<div>
+    <ul data-role="listview" data-theme="b" data-inset="true" data-divider-theme="a" data-count-theme="a">
+    <li data-role="list-divider">
+        <h2>
+            <span id="ac-results-max-date-hidden">&nbsp;</span>
+            <span class="ui-li-count count-day">&nbsp;Day&nbsp;</span>
+            <span class="ui-li-count count-night">Night</span>
+            <span class="ui-li-count count-total">Total</span>            
+        </h2>
+    </li>
+    <li id="ac-results-footer" data-role="list-divider">
+        <h2>
+            <span>Totals</span>
+            <span class="ui-li-count count-day" id="ac-results-footer-day">0</span>
+            <span class="ui-li-count count-night" id="ac-results-footer-night">0</span> 
+            <span class="ui-li-count count-total" id="ac-results-footer-total">0</span>
+        </h2> 
+    </li>
+    <li>
+        <form style="height:2em">
+            <a class="ui-btn-left ui-btn ui-btn-icon-left ui-shadow ui-btn-up-a" 
+               data-role="button"
+               data-icon="arrow-l" data-theme="a" data-mini="true" 
+               href="#page-options"><i class="fa fa-arrow-left"></i>
+               &nbsp;Back</a>
+<!--            
+            <a class="ui-btn ui-icon-close ui-btn-icon-left ui-shadow ui-btn-up-a" 
+               data-role="button"
+               data-icon="arrow-l" data-theme="a" data-mini="true" 
+               >Exit</a>
+-->              
+           
+<!--
+               aria-expanded="false" aria-haspopup="true" aria-owns="popupExit"
+               data-transition="pop" data-rel="pop" data-position-to="window"
+-->
+
+            <a class="ui-btn-right ui-btn ui-btn-icon-right ui-shadow ui-btn-up-a" 
+               data-role="button"
+               data-theme="a" data-mini="true" href="#page-map"
+               onclick="app.showGoogleMaps()">
+                <span class="ui=btn_inner ui-btn-corner-all">
+                    <span class="ui-btn-text russo russo-mini green outline">Map&nbsp;</span>
+                    <i class="fa fa-globe"></i>
+                </span>
+            </a>
+
+
+
+            <!--
+            <a class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-b" href="#" 
+               data-theme="a" data-icon="arrow-l" data-rel="back">
+                <span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+                    <span class="ui-btn-text">Back</span>
+                    <span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+                </span>
+            </a>
+            -->
+
+        </form>
+    </li>
+    </ul>       
+</div>

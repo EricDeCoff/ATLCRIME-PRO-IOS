@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<div id="popupExit" data-role="popup" data-theme="b" data-overlay-theme="b" data-dismissible="false">
+    <div data-role="header" class="ui-content" data-theme="a">
+        <center>
+            <br>
+            <span class="metro outline red">ATL</span><span class="metro outline yellow">CRIME</span>
+            <br>
+            <h2 class="russo">Exit App?</h2>
+        </center>
+    </div>
+    <div data-role="content" class="ui-content">
+        <!--
+        <h3 class="ui-title">Are you sure you want to exit this app?</h3>
+        -->
+        <form>
+        <a class="ui-btn ui-corner-all ui-shadow ui-btn-b" href="#page-results">Cancel</a>
+        <a class="ui-btn ui-corner-all ui-shadow ui-btn-b" href="#" data-transition="flow" data-rel="back"
+           onclick="navigator.app.exitApp()">Exit</a>
+        </form>            
+    </div>
+</div>
